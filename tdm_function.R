@@ -89,8 +89,8 @@ tdm_function <- function (input_data, model_name) {
     mutate(DV = as.numeric(DV)) |> 
     filter(!is.na(DV), !is.na(TIME), is.finite(DV), is.finite(TIME))
   
-   ggplot()  + geom_line(data = IPRED_CONC,aes(x = time, y = IPRED, color = "IPRED")) + geom_line(data = PRED_CONC, aes(x = time, y = IPRED, color = "PRED")) +
-     geom_point(data = tdm_clean |> mutate(DV = as.double(DV)), aes(x = TIME, y = DV)) +theme_light() 
+   #ggplot()  + geom_line(data = IPRED_CONC,aes(x = time, y = IPRED, color = "IPRED")) + geom_line(data = PRED_CONC, aes(x = time, y = IPRED, color = "PRED")) +
+    # geom_point(data = tdm_clean |> mutate(DV = as.double(DV)), aes(x = TIME, y = DV)) +theme_light() 
   
   # 10반감기 이후의 AUC CMAX CTROUGH 계산 로직 
   
